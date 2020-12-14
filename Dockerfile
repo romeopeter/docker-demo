@@ -1,5 +1,7 @@
 FROM node:12
 
+RUN mkdir /docker-demo
+
 WORKDIR /docker-demo
 
 COPY package*.json ./
@@ -12,4 +14,4 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-CMD ["run", "start"]
+CMD ["npm", "start"]
